@@ -9,6 +9,9 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
+    @IBOutlet weak var animalLabel: UILabel!
+    @IBOutlet weak var definitionLabel: UILabel!
+    
     var answers: [Answer] = []
     private let oftenRepeatedAnimals = ""
     
@@ -18,17 +21,18 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        getOftenRepeatedAnimal()
-        
+        getOftenRepeatedAnimal(answers: answers)
     }
     
-    private func getOftenRepeatedAnimal () {
+    func getOftenRepeatedAnimal (answers: [Answer]) {
         for answer  in answers {
-            let animals = answer.animal
+            let animal = answer.animal
+            var animals: [Animal] = []
+            animals.append(animal)
             print(animals)
         }
     }
 }
 
 
- 
+
