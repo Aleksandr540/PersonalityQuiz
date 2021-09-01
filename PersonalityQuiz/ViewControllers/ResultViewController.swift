@@ -19,6 +19,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         getOftenRepeatedAnimal()
+        
     }
     
     private func getOftenRepeatedAnimal () {
@@ -30,3 +31,4 @@ class ResultViewController: UIViewController {
 }
 
 
+ 
